@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let a = 34;
+        console.log(a);
+        a = "this is a Sting"
+        console.log(a);
+        // var allows multi plivaruivle defines one time ex. agin let a=35 is not allowd but var allowd two var_name same name
+        //num string object boolean sting object
+        // obj in js
+        let b = {
+            //here assingnig with a " = " is not allowd we use a : insted of = it thows an error other vise
+            ///here is a key value pair also
+            r: 15,
+            m: 15,
+            func: function myfun(n) {
+                console.log("your enter eliment is : " + n);
+            }
+        }
+        //funcation in js
+        function he() {
+            console.log("this is a printing a Demo");
+        }
+
+        //event in js
+
+        document.addEventListener("click", function click() {
+            console.log('clicked');
+            //alert('')
+            // let con=confirm("are you sure");
+            // console.log(con);
+        })
+
+        //string methods
+        //like substr index of index start of etc.... toString valueOf  etc..
+
+        //arr
+        let arr = [32, 43, 63];
+
+        for (let i = 0; i <= arr.length; i++) {
+            console.log("this is run " + i);
+        }
+
+        //for eeach
+        arr.forEach(Element => { console.log(Element) });
+
+        //
+    </script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+      </li>
+    </ul>
+    
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab"> home </div>
+      <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab"> profile </div>
+      <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab"> messages </div>
+    </div>
+    <h2>i am learning js</h2>
+    <!-- this is a js refresher here -->
+    <div class="mb-3">
+        <label for="" class="form-label sm-3"></label>
+        <input type="text" class="form-control w-50" name="" id="" aria-describedby="helpId" placeholder="Enter a text"
+            id="myInput">
+        <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <div class="btn btn-primary shadow-lg" onclick="getvalues()">Submit</div>
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="" class="rounded me-2" alt="...">🥳
+                <strong class="me-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+    </div>
+    <script>
+        function getvalues() {
+            var a = document.getElementById("myInput").value;
+            b = a.value;
+            console.log(b);
+            document.write(b);
+        }
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+            toastTrigger.addEventListener('click', () => {
+                const toast = new bootstrap.Toast(toastLiveExample)
+
+                toast.show()
+            })
+        }
+
+    </script>
+</body>
+
+</html>
